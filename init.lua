@@ -188,6 +188,11 @@ local config = {
       --     },
       --   },
       -- },
+      eslint = {
+        settings = {
+          autoFixOnSave = true,
+        },
+      },
     },
   },
 
@@ -207,10 +212,6 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-      ["<M-k>"] = { function() require("smart-splits").resize_up(3) end, desc = "Resize split up" },
-      ["<M-j>"] = { function() require("smart-splits").resize_down(3) end, desc = "Resize split down" },
-      ["<M-h>"] = { function() require("smart-splits").resize_left(3) end, desc = "Resize split left" },
-      ["<M-l>"] = { function() require("smart-splits").resize_right(3) end, desc = "Resize split right" },
     },
     t = {
       -- setting a mapping to false will disable it
@@ -234,7 +235,7 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
-
+      { "wakatime/vim-wakatime" },
       -- We also support a key value style plugin definition similar to NvChad:
       -- ["ray-x/lsp_signature.nvim"] = {
       --   event = "BufRead",
