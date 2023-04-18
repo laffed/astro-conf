@@ -20,4 +20,7 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-I>"] = { "copilot#Accept(<Tab>)", silent = true, expr = true, script = true },
+  },
 }
