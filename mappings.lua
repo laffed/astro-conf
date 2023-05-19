@@ -15,12 +15,11 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
+    ["<C-d>"] = { "<C-d>zz", desc = "jump down then center", noremap = true },
+    ["<C-u>"] = { "<C-u>zz", desc = "jump up then center", noremap = true },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
-  },
-  i = {
-    ["<C-I>"] = { "copilot#Accept(<Tab>)", silent = true, expr = true, script = true },
   },
 }
