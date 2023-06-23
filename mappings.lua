@@ -6,6 +6,9 @@
 return {
   -- first key is the mode
   n = {
+    -- tables with the `name` key will be registered with which-key if it's installed
+    -- this is useful for naming menus
+    -- ["<leader>b"] = { name = "Buffers" },
     -- L and H to move buffers
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
@@ -17,6 +20,7 @@ return {
     },
     ["<C-d>"] = { "<C-d>zz", desc = "jump down then center", noremap = true },
     ["<C-u>"] = { "<C-u>zz", desc = "jump up then center", noremap = true },
+    ["<leader>N"] = { ":Neorg<cr>", desc = "Neorg" },
   },
   t = {
     -- setting a mapping to false will disable it
