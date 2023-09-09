@@ -20,7 +20,6 @@ return {
     },
     ["<C-d>"] = { "<C-d>zz", desc = "jump down then center", noremap = true },
     ["<C-u>"] = { "<C-u>zz", desc = "jump up then center", noremap = true },
-    ["<leader>N"] = { ":Neorg<cr>", desc = "Neorg" },
   },
   t = {
     -- setting a mapping to false will disable it

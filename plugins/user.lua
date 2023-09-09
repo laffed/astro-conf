@@ -14,7 +14,7 @@ return {
   { "wakatime/vim-wakatime", lazy = false },
   {
     "zbirenbaum/copilot.lua",
-    lazy = false,
+    event = "User Astrofile",
     config = function()
       require("copilot").setup {
         panel = {
