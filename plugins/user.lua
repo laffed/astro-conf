@@ -68,14 +68,24 @@ return {
     },
   },
   { "ryanoasis/vim-devicons" },
-  { "ggandor/leap.nvim", init = function() require("leap").add_default_mappings() end },
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      if opts.ensure_installed ~= "all" then
-        opts.ensure_installed =
-          utils.list_insert_unique(opts.ensure_installed, { "bash", "markdown", "markdown_inline", "regex", "vim" })
-      end
+    "kylechui/nvim-surround",
+    version = "*", -- User for stability; omit to use `main` branch for latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration Here
+      }
     end,
   },
+  -- { "ggandor/leap.nvim", init = function() require("leap").add_default_mappings() end },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = function(_, opts)
+  --     if opts.ensure_installed ~= "all" then
+  --       opts.ensure_installed =
+  --         utils.list_insert_unique(opts.ensure_installed, { "bash", "markdown", "markdown_inline", "regex", "vim" })
+  --     end
+  --   end,
+  -- },
 }
